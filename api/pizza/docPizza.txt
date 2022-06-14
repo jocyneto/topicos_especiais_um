@@ -1,0 +1,22 @@
+O que o projeto precisa fazer?
+- Listar as pizzas
+- Pegar informações de UMA pizza
+- Inserir um pizza novo
+- Atualizar um pizza
+- Deletar um pizza
+
+Qual a estrutura de dados?
+- local para armazenar as pizzas
+-- pizza (id)
+-- tamanho
+-- massa
+-- borda 
+-- sabor
+-- valor
+
+Quais os endpoints?
+- (GET) /api/pizzas - /api/pizza/getall.php
+- (GET) /api/pizza/123 - /api/pizza/get.php (pizza)
+- (POST) /api/pizza - /api/pizza/insert.php (pizza, massa, borda, sabor, valor)
+- (PUT) /api/pizza/123 - /api/pizza/update.php (pizza, tamanho, massa, borda, sabor, valor)
+- (DELETE) /api/pizza/123 - /api/pizza/delete.php (pizza)

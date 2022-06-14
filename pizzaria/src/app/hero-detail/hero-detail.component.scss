@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    background: #eee;
+}
+
+.msg-login {
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.error {
+	background-color: rgba(209, 61, 61, 0.822);
+	color: #fff;
+}
+
+header {
+    width: 100%;
+    padding: 1em;
+    font-size: 140%;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    background-color: #98bbfb ;
+}
+
+header h1 {
+    font-weight: 600;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+
+nav a {
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    opacity: .7;
+    padding: 0 1em;
+    margin-left: 10px;
+    color: black;
+}
+
+article {
+
+    padding: 1em;
+    font-size: 140%;
+    max-width: 800px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, .05) 0 3px 15px;
+}
+
+article p {
+    margin: 0;
+    color: #333;
+}
+
+article p+p {
+    margin-top: .7em;
+}
+
+@media (min-width: 500px) {
+    header {
+        text-align: left;
+    }
+
+    nav {
+        float: right;
+    }
+
+    article {
+        margin: 3.5em auto 0;
+        padding: 2em;
+    }
+}
+
+@media (min-width: 800px) {
+    article {
+        margin: 3.5em auto;
+    }
+}
+
+/* And here's the magic! EQCSS.js required */
+@element html,
+body and (min-scroll-y: 100vh) {
+    header {
+        position: fixed;
+        top: 0;
+        background: white;
+        box-shadow: rgba(0, 0, 0, .05) 0 3px 15px;
+    }
+}
+
+.center {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 10%;
+}
+
+.center h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.fields {
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    top: 60%;
+}
+
+.fields h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.container {
+    #exampleInputEmail1 {
+        margin-bottom: 10px;
+    }
+
+    #exampleInputPassword1 {
+        margin-bottom: 10px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .form a {
+        position: relative;
+        display: inline-block;
+        outline: none;
+        text-decoration: none;
+        opacity: .7;
+        margin-right: 50%;
+        color: black;
+    }
+}

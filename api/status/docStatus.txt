@@ -1,0 +1,18 @@
+O que o projeto precisa fazer?
+- Listar os status
+- Pegar informações de UMA status
+- Inserir um status novo
+- Atualizar um status
+- Deletar um status
+
+Qual a estrutura de dados?
+- local para armazenar as anotações
+-- status (id)
+-- descricao
+
+Quais os endpoints?
+- (GET) /api/status - /api/status/getall.php
+- (GET) /api/status/123 - /api/status/get.php (status)
+- (POST) /api/status - /api/status/insert.php (descricao)
+- (PUT) /api/status/123 - /api/status/update.php (status, descricao)
+- (DELETE) /api/status/123 - /api/status/delete.php (status)

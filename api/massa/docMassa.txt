@@ -1,0 +1,18 @@
+O que o projeto precisa fazer?
+- Listar as massas
+- Pegar informações de UMA massa
+- Inserir um massa novo
+- Atualizar um massa
+- Deletar um massa
+
+Qual a estrutura de dados?
+- local para armazenar as anotações
+-- massa (id)
+-- descricao
+
+Quais os endpoints?
+- (GET) /api/massa - /api/massa/getall.php
+- (GET) /api/massa/123 - /api/massa/get.php (massa)
+- (POST) /api/massa - /api/massa/insert.php (descricao)
+- (PUT) /api/massa/123 - /api/massa/update.php (massa, descricao)
+- (DELETE) /api/massa/123 - /api/massa/delete.php (massa)

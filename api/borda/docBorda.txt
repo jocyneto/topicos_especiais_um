@@ -1,0 +1,19 @@
+O que o projeto precisa fazer?
+- Listar as bordas
+- Pegar informações de UMA borda
+- Inserir um borda novo
+- Atualizar um borda
+- Deletar um borda
+
+Qual a estrutura de dados?
+- local para armazenar as bordas
+-- borda (id)
+-- descricao
+-- valor
+
+Quais os endpoints?
+- (GET) /api/bordas - /api/borda/getall.php
+- (GET) /api/borda/123 - /api/borda/get.php (borda)
+- (POST) /api/borda - /api/borda/insert.php (descricao, valor)
+- (PUT) /api/borda/123 - /api/borda/update.php (borda, descricao, valor)
+- (DELETE) /api/borda/123 - /api/borda/delete.php (borda)

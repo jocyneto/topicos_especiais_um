@@ -1,0 +1,23 @@
+O que o projeto precisa fazer?
+- Listar os usuarios
+- Pegar informações de UM usuario (login)
+- Inserir um usuario novo
+- Atualizar um usuario
+- Deletar um usuario
+
+Qual a estrutura de dados?
+- local para armazenar os usuários
+-- usuario (id)
+-- grupo
+-- email
+-- cpf
+-- senha
+-- nome
+-- sobrenome
+
+Quais os endpoints?
+- (GET) /api/usuarios - /api/usuario/getall.php
+- (GET) /api/usuario/123 - /api/usuario/get.php (usuario)
+- (POST) /api/usuario - /api/usuario/insert.php (grupo, email, cpf, senha, nome, sobrenome)
+- (PUT) /api/usuario/123 - /api/usuario/update.php (usuario, grupo, email, cpf, senha, nome, sobrenome)
+- (DELETE) /api/usuario/123 - /api/usuario/delete.php (usuario)

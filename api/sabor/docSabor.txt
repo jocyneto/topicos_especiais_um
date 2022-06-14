@@ -1,0 +1,19 @@
+O que o projeto precisa fazer?
+- Listar os sabores
+- Pegar informações de UM sabor
+- Inserir um sabor novo
+- Atualizar um sabor
+- Deletar um sabor
+
+Qual a estrutura de dados?
+- local para armazenar os sabores
+-- sabor (id)
+-- nome
+-- imagem
+
+Quais os endpoints?
+- (GET) /api/sabores - /api/sabor/getall.php
+- (GET) /api/sabor/123 - /api/sabor/get.php (sabor)
+- (POST) /api/sabor - /api/sabor/insert.php (nome, imagem)
+- (PUT) /api/sabor/123 - /api/sabor/update.php (sabor, nome, imagem)
+- (DELETE) /api/sabor/123 - /api/sabor/delete.php (sabor)

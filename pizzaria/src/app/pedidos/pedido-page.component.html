@@ -1,0 +1,88 @@
+<header>
+  <img src="./assets/pizza-logo-with-crowns-by-Vexels.svg" width="50px" height="50px">
+  <nav>
+    <a class="btn btn-primary" href="/home-page" role="button">Peça online</a>
+    <a class="btn btn-primary" href="/cardapio" role="button">Cardápio</a>
+    <a class="btn btn-primary" href="/localizacao" role="button">Localização</a>
+    <a class="btn btn-primary" href="/historia" role="button">História</a>
+  </nav>
+</header>
+<div class="pdi">
+  <table id="customers">
+    <tr>
+      <th>Pedido</th>
+      <th>Pizza</th>
+      <th>Tamanho</th>
+      <th>Massa</th>
+      <th>Borda</th>
+      <th>Status</th>
+      <th>Bebida</th>
+      <th>Valor</th>
+      <th>Usuário</th>
+      <th>Ação</th>
+    </tr>
+
+    <tr *ngFor="let x of get_pedidos;let i = index;">
+      <td>{{x.pedido}}</td>
+      <td>{{x.pizza}}</td>
+      <td>{{x.tamanho}}</td>
+      <td>{{x.massa}}</td>
+      <td>{{x.borda}}</td>
+      <td>{{x.status}}</td>
+      <td>{{x.bebida}}</td>
+      <td>{{x.valor}}</td>
+      <td>{{x.usuario}}</td>
+      <button (click)="editData(x.bebida,x.pedido,x.pizza)" type="button" class="btn btn-primary" data-toggle="modal"
+        data-target="#exampleModal" style="margin-right: 10px; padding: 5px;">
+        Editar
+      </button>
+      <button id="delete" (click)="deleteData(x.pedido,x.pizza)" type="button" class="btn btn-primary" data-toggle="modal"
+        style="margin-right: 10px; padding: 5px;">
+        Excluir
+      </button>
+    </tr>
+
+  </table>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label for="exampleInputEmail1">Bebida</label>
+        <select class="form-select" aria-label="Default select example" (change)="setBebida()" id="bebida">
+          <option *ngFor="let x of get_bebidas" value={{x.bebida}}>{{x.descricao}}</option>
+        </select>
+        <label for="exampleInputEmail1">Tamanho</label>
+        <select class="form-select" aria-label="Default select example" (change)="setTamanho()" id="tamanho">
+          <option *ngFor="let x of get_tamanho" value={{x.tamanho}}>{{x.descricao}}</option>
+        </select>
+        <label for="exampleInputEmail1">Massa</label>
+        <select class="form-select" aria-label="Default select example" (change)="setMassa()" id="massa">
+          <option *ngFor="let x of get_massa" value={{x.massa}}>{{x.descricao}}</option>
+        </select>
+        <label for="exampleInputEmail1">Borda</label>
+        <select class="form-select" aria-label="Default select example" (change)="setBorda()" id="borda">
+          <option *ngFor="let x of get_borda" value={{x.borda}}>{{x.descricao}}</option>
+        </select>
+        <label for="exampleInputEmail1">Sabor</label>
+        <select class="form-select" aria-label="Default select example" (change)="setSabor()" id="sabor">
+          <option *ngFor="let x of get_sabor" value={{x.sabor}}>{{x.nome}}</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="postData()">Save
+          changes</button>
+      </div>
+    </div>
+  </div>
+</div>

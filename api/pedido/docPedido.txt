@@ -1,0 +1,22 @@
+O que o projeto precisa fazer?
+- Listar os pedidos
+- Pegar informações de UMA pedido
+- Inserir um pedido novo
+- Atualizar um pedido
+- Deletar um pedido
+
+Qual a estrutura de dados?
+- local para armazenar as pedidos
+-- pedido (id)
+-- pizza
+-- status
+-- bebida 
+-- valor
+-- usuario
+
+Quais os endpoints?
+- (GET) /api/pedidos - /api/pedido/getall.php
+- (GET) /api/pedido/123 - /api/pedido/get.php (pedido)
+- (POST) /api/pedido - /api/pedido/insert.php (pizza, status, bebida, valor, usuario)
+- (PUT) /api/pedido/123 - /api/pedido/update.php (pedido, pizza, status, bebida, valor, usuario)
+- (DELETE) /api/pedido/123 - /api/pedido/delete.php (pedido)

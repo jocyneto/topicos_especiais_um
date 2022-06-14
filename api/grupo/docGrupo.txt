@@ -1,0 +1,18 @@
+O que o projeto precisa fazer?
+- Listar os grupos
+- Pegar informações de UMA grupo
+- Inserir um grupo novo
+- Atualizar um grupo
+- Deletar um grupo
+
+Qual a estrutura de dados?
+- local para armazenar as anotações
+-- grupo (id)
+-- descricao
+
+Quais os endpoints?
+- (GET) /api/grupos - /api/grupo/getall.php
+- (GET) /api/grupo/123 - /api/grupo/get.php (grupo)
+- (POST) /api/grupo - /api/grupo/insert.php (descricao)
+- (PUT) /api/grupo/123 - /api/grupo/update.php (grupo, descricao)
+- (DELETE) /api/grupo/123 - /api/grupo/delete.php (grupo)

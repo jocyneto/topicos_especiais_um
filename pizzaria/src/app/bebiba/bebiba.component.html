@@ -1,0 +1,19 @@
+<header>
+  <img src="./assets/pizza-logo-with-crowns-by-Vexels.svg" width="50px" height="50px">
+  <nav>
+    <a class="btn btn-primary" href="/home-page" role="button">Peça online</a>
+    <a class="btn btn-primary" href="/cardapio" role="button">Cardápio</a>
+    <a class="btn btn-primary" href="/localizacao" role="button">Localização</a>
+    <a class="btn btn-primary" href="/historia" role="button">História</a>
+  </nav>
+</header>
+<div class="x">
+  <div class="container">
+    <h1 class="title m-3">Bebidas</h1>
+    <div class="wrap">
+      <div class="box one" *ngFor="let x of bebidas">
+        <h1>{{x.descricao}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
